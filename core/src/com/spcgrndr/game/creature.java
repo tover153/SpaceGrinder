@@ -1,6 +1,7 @@
 package com.spcgrndr.game;
 
 import java.io.Serializable;
+import java.util.Random;
 
 /**
  * Created by thad on 4/27/17.
@@ -126,6 +127,69 @@ public class creature implements Serializable{
 
         return newC;
     }
+
+    public creature Catch(int level) {
+        creature newC = new creature();
+
+        Random r = new Random();
+
+        setCrace(r.nextInt(level));
+        setCclass(r.nextInt(level));
+
+        setLevel(level);
+        setSpeed(r.nextInt(level));
+        //setHp((r.nextInt(level)));
+        setMutationFactor(r.nextInt(level));
+
+        setMaxStrength(r.nextInt(level));
+        setStrength(r.nextInt(getMaxStrength()));
+        setMaxAthlectics(r.nextInt(level));
+        setAthletics(r.nextInt(getMaxAthlectics()));
+        setMaxDexterity(r.nextInt(level));
+        setDexterity(r.nextInt(getMaxDexterity()));
+        setMaxAcrobatics(r.nextInt(level));
+        setAcrobatics(r.nextInt(getAcrobatics()));
+        setMaxStealth(r.nextInt(level));
+        setStealth(r.nextInt(getMaxStealth()));
+        setMaxIntelligence(r.nextInt(level));
+        setIntelligence(r.nextInt(getMaxIntelligence()));
+        setMaxArcana(r.nextInt(level));
+        setArcana(r.nextInt(getMaxArcana()));
+        setMaxHistory(r.nextInt(level));
+        setHistory(r.nextInt(getMaxHistory()));
+        setMaxInvestigation(r.nextInt(level));
+        setInvestigation(r.nextInt(getMaxInvestigation()));
+        setMaxNature(r.nextInt(level));
+        setNature(r.nextInt(getMaxNature()));
+        setMaxReligion(r.nextInt(level));
+        setReligion(r.nextInt(getMaxReligion()));
+        setMaxWisdom(r.nextInt(level));
+        setWisdom(r.nextInt(getMaxWisdom()));
+        setMaxAnimalHandling(r.nextInt(level));
+        setAnimalHandling(r.nextInt(getMaxAnimalHandling()));
+        setMaxInsight(r.nextInt(level));
+        setInsight(r.nextInt(getMaxInsight()));
+        setMaxMedicine(r.nextInt(level));
+        setMedicine(r.nextInt(getMaxMedicine()));
+        setMaxPerception(r.nextInt(level));
+        setPerception(r.nextInt(getMaxPerception()));
+        setMaxSurvival(r.nextInt(level));
+        setSurvival(r.nextInt(getMaxSurvival()));
+        setMaxCharisma(r.nextInt(level));
+        setCharisma(r.nextInt(getMaxCharisma()));
+        setMaxDeception(r.nextInt(level));
+        setDeception(r.nextInt(getMaxDeception()));
+        setMaxIntimidation(r.nextInt(level));
+        setIntimidation(r.nextInt(getMaxIntimidation()));
+        setMaxPerformance(r.nextInt(level));
+        setPerformance(r.nextInt(getMaxPerformance()));
+        setMaxPersuasion(r.nextInt(level));
+        setPersuassion(r.nextInt(getMaxPersuasion()));
+
+
+        return newC;
+    }
+
 
     public Integer getIdNO() {
         return idNO;
