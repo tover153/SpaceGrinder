@@ -123,7 +123,24 @@ public class creature implements Serializable{
     public creature Breed(creature inCreature) {
         creature newC = new creature();
 
+        int totalLevel = getLevel() + inCreature.getLevel();
+        newC.setLevel(totalLevel);
 
+        Random r = new Random();
+        if (r.nextInt(1) > 0) {
+            newC.setCclass(inCreature.getCclass());
+        } else {
+            newC.setCclass(getCclass());
+        }
+
+        r.nextInt();
+        if (r.nextInt(1) > 0) {
+            newC.setCrace(inCreature.getCrace());
+        } else {
+            newC.setCrace(getCrace());
+        }
+
+        
 
         return newC;
     }
