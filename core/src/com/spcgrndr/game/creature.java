@@ -15,6 +15,7 @@ public class creature implements Serializable{
     private Integer level;
     private Integer speed;
     private Integer hp;
+    private Integer mutationFactor;
 
     private Integer strength;
     private Integer maxStrength;
@@ -69,6 +70,7 @@ public class creature implements Serializable{
         setLevel(0);
         setSpeed(0);
         setHp(0);
+        setMutationFactor(0);
 
         setStrength(0);
         setMaxStrength(0);
@@ -119,6 +121,9 @@ public class creature implements Serializable{
 
     public creature Breed(creature inCreature) {
         creature newC = new creature();
+
+
+
         return newC;
     }
 
@@ -528,5 +533,13 @@ public class creature implements Serializable{
 
     public void setMaxPersuasion(Integer maxPersuasion) {
         this.maxPersuasion = maxPersuasion;
+    }
+
+    public Integer getMutationFactor() {
+        return mutationFactor;
+    }
+
+    public void setMutationFactor(Integer mutationFactor) {
+        this.mutationFactor = mutationFactor;
     }
 }
