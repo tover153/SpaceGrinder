@@ -70,7 +70,7 @@ public class creature implements Serializable{
         setLevel(0);
         setSpeed(0);
         setHp(0);
-        setMutationFactor(1);
+        setMutationFactor(0);
 
         setStrength(0);
         setMaxStrength(0);
