@@ -124,7 +124,7 @@ public class creature implements Serializable{
         creature newC = new creature();
 
         int totalLevel = getLevel() + inCreature.getLevel();
-        newC.setLevel(totalLevel);
+        newC.setLevel(totalLevel / 2);
 
         Random r = new Random();
         if (r.nextInt(1) > 0) {
